@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb_Assignment</title>
+
+    <style>
+        .image {
+            width: 150px;
+        }
+
+        .heading {
+            color: lightseagreen;
+            position: relative;
+            bottom: 100px;
+            right: -100px;  
+            text-decoration: underline;       
+        }
+
+        .maincontainer {
+            border: 5px solid red;
+            background-color: rgb(73, 71, 73);
+            margin: auto;
+            padding: 98px 0px 96px 125px;
+            width: 700px;
+            height: 400px;
+        }
+
+        .button_position {
+            position: relative;
+            top: 40px;
+            right: 140px;
+
+
+        }
+
+        .div2position {
+            position: relative;
+            left: 400px;
+            bottom: 280px;
+            
+        }
+
+        .pos {
+            position: relative;
+            top: 40px;
+            right: 126px;
+        }
+
+        .shape{
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="maincontainer">
+        <h1 class="heading">Turning Bulb On or Off.</h1>
+        <div class="class">
+            <img class="image" id="turn" src="https://www.w3schools.com/js/pic_bulboff.gif">
+            <button class="button_position shape" onclick="turnon()">Turn_on</button>
+            <button class="button_position shape" onclick="turnoff()">Turn_off</button>
+        </div>
+        <div class="div2position">
+            <img class="image" id="2nd_bulb" src="https://www.w3schools.com/js/pic_bulboff.gif">
+            <button onclick="turnOnOff()" class="pos shape" id="2nd_bulb">Turn_on / off</button>
+        </div>
+
+    </div>
+
+    <!--
+    <img id="turnon"src="https://www.w3schools.com/js/pic_bulbon.gif">
+    <img id="turnoff"src="https://www.w3schools.com/js/pic_bulboff.gif">
+    -->
+    <script>
+        var bulbStatus = false;
+        function turnon() {
+            document.getElementById('turn').src = "https://www.w3schools.com/js/pic_bulbon.gif"
+        }
+        function turnoff() {
+            document.getElementById('turn').src = "https://www.w3schools.com/js/pic_bulboff.gif"
+        }
+        function turnOnOff() {
+
+            if (bulbStatus == true) {
+                document.getElementById('2nd_bulb').src = "https://www.w3schools.com/js/pic_bulboff.gif";
+                bulbStatus = false;
+            }
+            else {
+                document.getElementById('2nd_bulb').src = "https://www.w3schools.com/js/pic_bulbon.gif";
+                bulbStatus = true;
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+<!--
+    https://www.w3schools.com/js/pic_bulbon.gif
+  https://www.w3schools.com/js/pic_bulboff.gif
+-->
